@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>Contact dialer using Flask</title>
+ <script type="text/javascript"
+         src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+
+{% if contacts %}
+<h3>Found {{no_contacts}} contacts<h3>
+<hr/>
+<!-- Loop through the contacts and display info -->
+{% for p in contacts: %}
+
+<h1>Name : {{p["name"]}}<h1>
+<h1> Number : {{p["number"]}}</h1>
+<!-- Call the call controller with the number passed
+as argument -->
+<a href="call/{{p['number']}}" target="blank">
+DIAL
+</a>
+<hr/>
+{% endfor %}
+  
+{% else %}
+<h1>No contacts</h1>
+  
+{% endif %}
+
+</body>
+</html>

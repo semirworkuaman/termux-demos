@@ -1,0 +1,29 @@
+Demo:
+	Simple script to display & dial contact
+	number using Termux,Termux Api, Python
+	and Flask.
+
+
+What you need :
+
+1) Termux
+	Download and install from play store
+2) Termux API
+	pkg install termux-api
+3) Python 2 or 4
+	pkg install python (for python 3)
+	pkg install python2 (for python 2)
+4) Flask
+	pip install flask (for python 3)
+	pip2 install flask (for python2)
+	
+5) Python Files and Templates
+	contact.py - the model file
+	call.py for calling contact
+	app.py - the  controller file
+	./templates/index.html - the view file
+	
+	
+How to use:
+	Go to app directory
+	Run python app.py
