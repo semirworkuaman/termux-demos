@@ -1,7 +1,7 @@
 Demo:
 	Simple script to display & dial contact
-	number using Termux,Termux Api, Python
-	and Flask.
+	numbers using Termux,Termux Api, 
+	Python and Flask.
 
 
 What you need :
@@ -10,7 +10,7 @@ What you need :
 	Download and install from play store
 2) Termux API
 	pkg install termux-api
-3) Python 2 or 4
+3) Python 2 or 3
 	pkg install python (for python 3)
 	pkg install python2 (for python 2)
 4) Flask
@@ -27,3 +27,9 @@ What you need :
 How to use:
 	Go to app directory
 	Run python app.py
+	
+	
+Code available on github:
+	https://github.com/semirworkuaman/termux-demos
+	
+	thank you for watching 
