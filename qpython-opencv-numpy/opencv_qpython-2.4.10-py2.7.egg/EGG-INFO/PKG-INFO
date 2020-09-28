@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: opencv-qpython
+Version: 2.4.10
+Summary: OpenCV for Python, tihs is the prebuilt version for QPython
+Home-page: https://github.com/qpython-android
+Author: QPython
+Author-email: support@qpython.org
+License: MIT License
+Description: 
+        This is OpenCV (2.4.10.1) for QPython,
+        
+        Usage:
+        
+        import cv
+        
+        
+Platform: UNKNOWN

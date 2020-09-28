@@ -1,0 +1,7 @@
+cv/__init__.py
+cv/cv2.so
+opencv_qpython.egg-info/PKG-INFO
+opencv_qpython.egg-info/SOURCES.txt
+opencv_qpython.egg-info/dependency_links.txt
+opencv_qpython.egg-info/requires.txt
+opencv_qpython.egg-info/top_level.txt

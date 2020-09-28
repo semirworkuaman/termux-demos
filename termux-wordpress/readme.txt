@@ -32,5 +32,5 @@ available on github:
 
 https://github.com/semirworkuaman/termux-demos/termux-wordpress
 
-Thank You for watching 
+
 
