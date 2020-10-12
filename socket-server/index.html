@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="naolMobi">
+<head>
+	<base href="file:///sdcard/sl4a/scripts/socket-server/">
+    <meta charset="UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="icon" type="image/png" href="logo.png" />
+	<meta name="author" content="Rimes" />
+	<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0, user-scalable=no">
+		<title>Title</title>
+		<!-- angular material stylesheet-->
+	<link rel="stylesheet" href="css/angular-material.css"/>
+	<!-- custom stylesheet-->
+	<link rel="stylesheet" href="style.css"/>
+	
+	<!-- text editor stylesheet-->
+	
+	    
+		<!-- Icons-->
+		
+	<link rel="stylesheet" href="css/fonts/font-awesome/css/font-awesome.min.css"/>
+	    
+	
+	</head>
+ 
+    <body ng-controller="AppController as ctrl" >
+    	
+   <section id="main"  style="height:100%;overflow:hidden"  ng-cloak layout="row" >
+
+    <md-sidenav 
+        class="md-sidenav-left flex-25"
+        md-component-id="left"
+        
+        >
+
+      <md-toolbar md-colors="{background:'black'}">
+        <h1 class="md-toolbar-tools">Active Servers</h1>
+      </md-toolbar>
+      <md-content >
+        <md-list >
+
+  
+  <md-list-item   ng-repeat="sock in sock_servers">
+  	
+    <h4 flex> /{{sock.name}}</h4>
+    
+    
+    <md-button   class="flex md-secondary" ng-click="ctrl.stop_serv($index,sock)"><i  class="fa-icon-stop" ></i></md-button>
+    <md-button  class="flex md-secondary" ng-click="ctrl.select_server($index,sock)"><i  class="fa-icon-pencil" ></i></md-button>
+  
+<md-divider></md-divider>
+</md-list-item>
+  
+  
+  </md-list>
+      </md-content>
+
+    </md-sidenav>
+
+	<md-content class="flex layout-column ">
+		<md-toolbar class="flex flex-10">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="ctrl.toggleLeft()" aria-label="Menu" >
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+
+        
+
+        <span flex>Socket Server</span>
+        <md-button class="md-icon-button" ng-click="ctrl.toggleRight()" aria-label="Menu" >
+          <md-icon class="icon fa-icon-plus"></md-icon>
+        </md-button>
+        <md-button aria-label="Log Out" ng-click="ctrl.kill()">
+          <md-icon md-svg-icon="img/icons/ic_close_24px.svg"></md-icon>
+CLOSE
+        </md-button>
+        </div>
+        </md-toolbar>
+        <div class="flex-90  layout-column">
+        	
+        	<md-list id="log" class="layout-column flex-100" style="padding-top:0;padding-bottom:50px;width:100%;background:black;color:white;overflow-y:scroll" >
+			
+        	<md-list-item class="flex-5 flex-nogrow" ng-repeat="log in ctrl.logs track by $index">
+        	<p>{{log}}</p>
+        <md-divider style="color:white;border-color:white"></md-divider>
+        </md-list-item>
+        </md-list>
+        	</div>
+        
+		</md-content>
+		<md-sidenav style="max-width:30%"
+        class="md-sidenav-right"
+        md-component-id="right"
+        
+        md-whiteframe="4">
+
+      <md-toolbar class="sticky md-theme-indigo">
+        <h1 class="md-toolbar-tools">Add New</h1>
+      </md-toolbar>
+      <md-content layout-column layout-padding>
+        <md-input-container>
+        	<input type="text" placeholder="Name" ng-model="ctrl.sock_server.name" class="md-title"/>
+        
+        </md-input-container>
+        <md-input-container>
+        	<input type="text" placeholder="IP ADDRESS" ng-model="ctrl.sock_server.ip" class="md-title"/>
+        
+        </md-input-container>
+        	<md-input-container>
+        	<input type="number" placeholder="PORT" ng-model="ctrl.sock_server.port" class="md-title"/>
+        
+        </md-input-container>
+        <md-input-container >
+        	<md-button class="md-primary md-accent" ng-click="ctrl.start_server('start_server',ctrl.sock_server)">START</md-button>
+        
+        </md-input-container>
+
+		
+        
+      </md-content>
+
+    </md-sidenav>
+		</section>
+	<!--jquery -->
+    
+    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+	 <!--angular -->
+    <script src="js/angular/angular.min.js"></script>
+    <script src="js/angular/angular-animate.min.js"></script>
+   <script src="js/angular/angular-route.min.js"></script>
+   <script src="js/angular/angular-aria.min.js"></script>
+<script src="js/angular/angular-messages.min.js"></script>
+   
+     
+     
+    
+    <script src="js/angular/angular-material.min.js"></script>
+    <!--socket -->
+    <script src="js/touch/fastclick.js"></script>
+    
+    <script type="text/javascript" src="js/socket/socket.io.js"></script>
+   <script type="text/javascript" src="js/socket/socket.js"></script>
+    
+    
+  
+  
+  
+  
+  <script src="index.js"></script>
+
+    
+    	
+  
+		
+	        
+	        
+	        
+    
+	    
+</body>
+</html>

@@ -1,11 +1,11 @@
 
-Using OpenCV and numpy with
+Using OpenCV and Numpy with
 SL4A/Qpython
 
 If you have the latest qpython version,
 this wont work.
 
-You need termux,sl4a or qpython
+You need termux and sl4a / qpython
 
 Step 1 : Create a new folder in termux
 
@@ -14,8 +14,8 @@ https://github.com/semirworkuaman/termux-demos/
 
 Step 3 : Make the folder readable
 
-Step 4 : Create a python script and add
-the folders to system path
+Step 4 : Copy the demo script to sl4a
+or qpython.
 
 Step 5 : Try and import cv / numpy
 
